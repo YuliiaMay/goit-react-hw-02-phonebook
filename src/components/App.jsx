@@ -13,8 +13,6 @@ export class App extends Component {
       {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
     ],
     filter: '',
-    name: '',
-    number: ''
   }
 
 
@@ -24,10 +22,17 @@ export class App extends Component {
       name,
       number
     }
-
+    
     this.setState(prevState => ({
       contacts: [contact, ...prevState.contacts]
     }))
+  }
+
+
+  removeContact = (id) => {
+    this.setState({
+      contacts: this.state.contacts.filter(contact => contact.id !== id),
+    })
   }
 
   handelChangeFilter = ({ target: { value } }) => {
@@ -37,9 +42,7 @@ export class App extends Component {
   }
 
 
-
   render() {
-    // const { contacts, filter, name } = this.state;
     const normalizedFilter = this.state.filter.toLowerCase();
     const visibleContacts = this.state.contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizedFilter)
@@ -49,11 +52,11 @@ export class App extends Component {
     return (
       <>
         <h1>Phonebook</h1>
-        <ContactsForm onSubmit={this.createContact} />
+        <ContactsForm onSubmit={this.createContact} contacts={this.state.contacts} />
 
         <h1>Contacts</h1>
         <ContactsFilter filter={this.state.filter} onChangeFilter={this.handelChangeFilter} />
-        <ContactsList contacts={visibleContacts} />
+        <ContactsList contacts={visibleContacts} onRemoveClick={this.removeContact} />
       </>
     );
   }

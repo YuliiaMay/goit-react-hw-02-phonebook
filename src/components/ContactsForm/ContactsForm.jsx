@@ -17,10 +17,20 @@ class ContactsForm extends Component {
         e.preventDefault();
 
         const { name, number } = this.state;
+        const { contacts } = this.props;
+
+        
+        if (contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase())) {
+            return alert(`${name} is already in contacts.`);
+        } else if (contacts.find(contact => contact.number.toLowerCase() === number.toLowerCase())) {
+            return alert(`This number is already in contacts.`);
+        }
+
         this.props.onSubmit({
-            name: name,
-            number: number
+                name: name,
+                number: number
         });
+
 
         this.reset();
     }
