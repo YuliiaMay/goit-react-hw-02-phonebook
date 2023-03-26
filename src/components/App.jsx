@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { nanoid } from 'nanoid';
 import Section from "./Section/Section";
+import Title from "./ContactTitle/ContactTitle";
 import ContactsForm from "./ContactsForm/ContactsForm";
 import ContactsFilter from "./ContactsList/Filter";
 import ContactsList from "./ContactsList/ContactsList";
@@ -53,14 +54,12 @@ export class App extends Component {
 
     return (
       <Section>
-
-        <h1>Phonebook</h1>
+        
         <ContactsForm onSubmit={this.createContact} contacts={this.state.contacts} />
 
-        <h1>Contacts</h1>
+        <Title text="Contacts" />
         <ContactsFilter filter={this.state.filter} onChangeFilter={this.handelChangeFilter} />
         <ContactsList contacts={visibleContacts} onRemoveClick={this.removeContact} />
-        
       </Section>
     );
   }

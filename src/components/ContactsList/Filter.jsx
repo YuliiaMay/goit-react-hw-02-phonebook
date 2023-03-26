@@ -1,7 +1,8 @@
 import React from "react";
+import { FilterBlock } from "./Filter.styled";
 
 const ContactsFilter = ({filter, onChangeFilter}) => (
-    <div>
+    <FilterBlock>
         <label htmlFor="contacts-filter">Find contacts by name</label>
         <input 
             id='contacts-filter'
@@ -9,7 +10,7 @@ const ContactsFilter = ({filter, onChangeFilter}) => (
             value={filter}
             onChange={onChangeFilter}
         />
-    </div>
+    </FilterBlock>
 )
 
 export default ContactsFilter;

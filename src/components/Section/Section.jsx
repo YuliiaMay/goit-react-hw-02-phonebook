@@ -1,10 +1,11 @@
 import React from "react";
+import { Wrapper } from "./Section.styled";
 
 const Section = ({children}) => {
     return (
-        <Section>
+        <Wrapper>
             {children}
-        </Section>
+        </Wrapper>
     )
 }
 

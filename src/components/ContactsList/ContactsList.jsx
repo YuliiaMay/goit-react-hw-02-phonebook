@@ -1,20 +1,21 @@
 import React from "react";
+import { Contact, DeleteContactBtn } from "./ContactsList.styled";
 
 const ContactsList = ({ contacts, onRemoveClick }) => (
     <ul>
         {
             contacts.map(({ id, name, number }) => {
                 return (
-                    <li key={id}>
+                    <Contact key={id}>
                         <span>{name}</span>
                         <span>{number}</span>
-                        <button
+                        <DeleteContactBtn
                             type="button"
                             onClick={() => {
                                 onRemoveClick(id);
                             }}
-                        >Delete</button>
-                    </li>
+                        >❌</DeleteContactBtn>
+                    </Contact>
                 )
             })
         }
