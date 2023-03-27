@@ -20,4 +20,5 @@ export const DeleteContactBtn = styled.button`
     height: 32px;
     background-color: transparent;
     border: 1px solid #0070A0;
+    cursor: pointer;
 `

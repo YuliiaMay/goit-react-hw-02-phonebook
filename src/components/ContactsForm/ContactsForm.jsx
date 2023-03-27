@@ -77,7 +77,7 @@ class ContactsForm extends Component {
                 
 
                 <AddContactBtn type="submit">
-                    Add contact
+                    ADD
                 </AddContactBtn>
             </Form>            
         )

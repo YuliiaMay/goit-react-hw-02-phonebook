@@ -23,24 +23,30 @@ export const ContactFormLabel = styled.label`
 
 export const ContactInput = styled.input`
     margin-bottom: 16px;
-    height: 28px
-    border-radius: 30px;
-    background-color: transparant;
+    // height: 40px
+    // border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid #0070A0;
+
+    &:hover,
+    &:focus {
+        border: 2px solid #0070A0;
+        box-shadow: 4px 2px 1px 1px #0070A0;
+    }
     
 `;
 
 export const AddContactBtn = styled.button`
-    // width: 150px;
     height: 26px;
-    background-color: transparant;
+    background-color: transparent;
     color: #0070A0;
     cursor: pointer;
     font-size: 12px;
     color: #0070A0;
+    border: 2px solid #0070A0;
 
     &:hover,
     &:focus {
-        background-color: #0070A0;
-        color: #fff;
+        box-shadow: 4px 2px 1px 1px #0070A0;
     }
 `
