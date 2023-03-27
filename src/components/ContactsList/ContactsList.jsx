@@ -24,8 +24,4 @@ const ContactsList = ({ contacts, onRemoveClick }) => (
 ) 
 
 
-ContactsList.propTypes = {
-    
-}
-
 export default ContactsList;
