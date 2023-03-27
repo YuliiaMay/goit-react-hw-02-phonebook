@@ -1,6 +1,6 @@
 import React from "react";
 import { Contact, DeleteContactBtn } from "./ContactsList.styled";
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 const ContactsList = ({ contacts, onRemoveClick }) => (
     <ul>
@@ -22,6 +22,5 @@ const ContactsList = ({ contacts, onRemoveClick }) => (
         }
     </ul>
 ) 
-
 
 export default ContactsList;

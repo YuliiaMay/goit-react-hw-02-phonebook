@@ -33,7 +33,6 @@ export const ContactInput = styled.input`
         border: 2px solid #0070A0;
         box-shadow: 4px 2px 1px 1px #0070A0;
     }
-    
 `;
 
 export const AddContactBtn = styled.button`
